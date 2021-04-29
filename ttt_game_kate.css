@@ -1,37 +1,45 @@
 body {
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    align-content: center;
-  }
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  align-content: center;
+}
 
-  .background {
-    background-image: url(images/Sakura1.jpg);
-    margin: 0px;
-    padding: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+.background {
+  background-image: url(images/Sakura1.jpg);
+  margin: 0px;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
-  .gameboard {
-    background-color: #b192b8;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    width: 600px;
-    height: 600px;
-  }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
 
-  .box {
-    background-color: #e0c1d3;
-    color: #804b6a;
-    margin: 2px;
-    width: 175px;
-    height: 175px;
-  }
+.gameboard {
+  background-color: #b192b8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 600px;
+  height: 600px;
+}
 
-  button {
-    height: 175px;
-    color: rgb(243, 215, 243);
+.box {
+  background-color: #e0c1d3;
+  color: #804b6a;
+  margin: 2px;
+  width: 175px;
+  height: 175px;
+}
+
+button {
+  height: 175px;
+  color: rgb(243, 215, 243);
+}
