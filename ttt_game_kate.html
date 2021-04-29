@@ -19,65 +19,7 @@
 
     <link rel="stylesheet" href="ttt_game_kate.css" />
 
-    <style>
-      body {
-        height: 100%;
-        margin: 0px;
-        padding: 0px;
-      }
-
-      .background {
-        background-image: url(images/Sakura1.jpg);
-        margin: 0px;
-        padding: 10px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
-
-      .header {
-        margin: 0px;
-        padding: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: space-around;
-      }
-
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-      }
-
-      .gameboard {
-        background-color: #b192b8; /*color of gameboard*/
-        width: 600px; /*fixed width*/
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-around;
-      }
-
-      .box {
-        background-color: #e0c1d3; /*boxes on gameboard*/
-        color: #804b6a;
-        width: 175px;
-        height: 175px;
-      }
-
-      button {
-        height: 175px;
-        color: rgb(243, 215, 243);
-      }
-
-      .endGame {
-        display: flex;
-        flex-direction: column;
-        order: 3;
-      }
-    </style>
+    <style></style>
   </head>
 
   <body>
@@ -91,7 +33,7 @@
             <button
               type="button"
               class="btn btn-lg btn-block"
-              onclick="myFunction();"
+              onclick="myGame(); ticTac_1();"
               id="b1"
             ></button>
           </div>
@@ -100,7 +42,7 @@
             <button
               type="button"
               class="btn btn-lg btn-block"
-              onclick="myFunction();"
+              onclick="myGame(); ticTac_2();"
               id="b2"
             ></button>
           </div>
@@ -108,7 +50,7 @@
             <button
               type="button"
               class="btn btn-lg btn-block"
-              onclick="myFunction();"
+              onclick="myGame(); ticTac_3();"
               id="b3"
             ></button>
           </div>
@@ -116,7 +58,7 @@
             <button
               type="button"
               class="btn btn-lg btn-block"
-              onclick="myFunction();"
+              onclick="myGame(); ticTac_4();"
               id="b4"
             ></button>
           </div>
@@ -125,7 +67,7 @@
             <button
               type="button"
               class="btn btn-lg btn-block"
-              onclick="myFunction();"
+              onclick="myFunction();ticTac_5();"
               id="b5"
             ></button>
           </div>
@@ -134,7 +76,7 @@
             <button
               type="button"
               class="btn btn-lg btn-block"
-              onclick="myFunction();"
+              onclick="myGame();ticTac_6();"
               id="b6"
             ></button>
           </div>
@@ -143,7 +85,7 @@
             <button
               type="button"
               class="btn btn-lg btn-block"
-              onclick="myFunction();"
+              onclick="myGame(); ticTac_7();"
               id="b7"
             ></button>
           </div>
@@ -152,7 +94,7 @@
             <button
               type="button"
               class="btn btn-lg btn-block"
-              onclick="myFunction();"
+              onclick="myFunction();ticTac_8();"
               id="b8"
             ></button>
           </div>
@@ -161,7 +103,7 @@
             <button
               type="button"
               class="btn btn-lg btn-block"
-              onclick="myFunction();"
+              onclick="myGame(); ticTac_9();"
               id="b9"
             ></button>
           </div>
@@ -170,34 +112,22 @@
             <button
               type="button"
               class="btn btn-lg btn-block"
-              onclick="resetFunction();"
-              id="reset"
+              onclick="resetMe();"
+              id="b00"
             >
               Reset
             </button>
+
+            <div>
+              <p id="textline"></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
 
-    <script src="ttt_game.js"></script>
+    <script src="ttt_game_kate.js"></script>
   </body>
 </html>

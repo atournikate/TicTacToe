@@ -30,18 +30,17 @@ body {
 }
 
 .gameboard {
-  background-color: #b192b8;
+  background-color: #b192b8; /*color of gameboard*/
+  width: 600px; /*fixed width*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
-  width: 600px;
-  height: 600px;
 }
 
 .box {
-  background-color: #e0c1d3;
-  color: #804b6a;
+  background-color: #e0c1d3; /*boxes on gameboard*/
+  color: #804b6a; /*text in boxes*/
   margin: 2px;
   width: 175px;
   height: 175px;
@@ -49,11 +48,12 @@ body {
 
 button {
   height: 175px;
-  color: rgb(243, 215, 243);
+  color: #f3d7f3;
 }
 
 .endGame {
   display: flex;
   flex-direction: column;
+  width: 300px;
   order: 3;
 }
