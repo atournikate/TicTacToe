@@ -1,11 +1,13 @@
 alert("I am reading this file...");
 
+
+
 var button = document.querySelectorAll(".btn");
 
-alert("There are " + button.length + " buttons");
+alert("There are " + button + " buttons");
 
 
-alert("Hello World");
+alert("You're goood to go!");
 
 /* 
 / 

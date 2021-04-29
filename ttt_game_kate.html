@@ -18,12 +18,75 @@
     />
 
     <link rel="stylesheet" href="ttt_game_kate.css" />
+
+    <style>
+      body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .background {
+        background-image: url(images/Sakura1.jpg);
+        margin: 0px;
+        padding: 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .header {
+        margin: 0px;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-around;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .gameboard {
+        background-color: #b192b8; /*color of gameboard*/
+        width: 600px; /*fixed width*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+      }
+
+      .box {
+        background-color: #e0c1d3; /*boxes on gameboard*/
+        color: #804b6a;
+        width: 175px;
+        height: 175px;
+      }
+
+      button {
+        height: 175px;
+        color: rgb(243, 215, 243);
+      }
+
+      .endGame {
+        display: flex;
+        flex-direction: column;
+        order: 3;
+      }
+    </style>
   </head>
 
   <body>
     <div class="background">
+      <div class="header">
+        <h1>Kitty Corner</h1>
+      </div>
       <div class="container p-2">
-        <div class="gameboard m-5 display-4">
+        <div class="gameboard m-5 h-100 p-3">
           <div class="box">
             <button
               type="button"
@@ -102,16 +165,17 @@
               id="b9"
             ></button>
           </div>
-        </div>
-        <div class="endGame">
-          <button
-            type="button"
-            class="btn btn-lg btn-block"
-            onclick="resetFunction();"
-            id="reset"
-          >
-            Reset
-          </button>
+
+          <div class="endGame w-100">
+            <button
+              type="button"
+              class="btn btn-lg btn-block"
+              onclick="resetFunction();"
+              id="reset"
+            >
+              Reset
+            </button>
+          </div>
         </div>
       </div>
     </div>
