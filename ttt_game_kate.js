@@ -1,25 +1,28 @@
 alert("I am reading this file..."); //Test JS
 
-var button = document.querySelectorAll(".btn");
+var player = "X";
 
-alert("There are " + button.length + " buttons"); //Test JS & HTML communication
+function turnChange(id) {
+    
+    if (player == "X") {
+        document.getElementById(id).innerHTML = "X";
+        player = "O";
 
-var winAlert = document.getElementById("textline");
-var p1Win = "Player 1 Wins!"
-var p2Win = "Player 2 Wins!"
-var aTie = "It's a Cat's Game!"
-var SYMBOLS = ["X" , "O"];
-
-
-function symbolMark () {
-    document.getElementById("#mark").innerHTML = "X";
+    }
+    else {
+        document.getElementById(id).innerHTML = "O";
+        player = "X";
+        console.log(player);
+    }
 }
 
+var announcement = document.getElementById('textline').value;
 
-/*
+
+
+
 // Setting DOM to all buttons
-function myGame() {
-    var b1, b2, b3, b4, b5, b6, b7, b8, b9, b00;
+var b1, b2, b3, b4, b5, b6, b7, b8, b9, b00;
     b1 = document.getElementById("b1").value;
     b2 = document.getElementById("b2").value;
     b3 = document.getElementById("b3").value;
@@ -32,6 +35,9 @@ function myGame() {
     b00 = document.getElementById("b00").value;
 
 
+
+function myGame() {
+    
     //Player 1 win criteria
     if ((b1 == X) && (b2 == X) && (b3 == X)) {
         winAlert.innerHTML = p1Win;
@@ -45,36 +51,37 @@ function myGame() {
     }
 
     else if ((b4 == X) && (b5 == X) && (b6 == X)) {
-    winAlert.innerHTML = p1Win;
-    b1.disabled=true;
-    b2.disabled=true;
-    b3.disabled=true;
-    b7.disabled=true;
-    b8.disabled=true;
-    b9.disabled=true;
-    alert(p1Win);
+        winAlert.innerHTML = p1Win;
+        b1.disabled=true;
+        b2.disabled=true;
+        b3.disabled=true;
+        b7.disabled=true;
+        b8.disabled=true;
+        b9.disabled=true;
+        alert(p1Win);
     }
+
 
     else if ((b7 == X) && (b8 == X) && (b9 == X)) {
         winAlert.innerHTML = p1Win;
-        b.disabled=true;
-        b.disabled=true;
-        b.disabled=true;
-        b.disabled=true;
-        b.disabled=true;
-        b.disabled=true;
+        b1.disabled=true;
+        b2.disabled=true;
+        b3.disabled=true;
+        b4.disabled=true;
+        b5.disabled=true;
+        b6.disabled=true;
         alert(p1Win);
         }
 
     else if ((b1 == X) && (b5 == X) && (b9 == X)) {
-    winAlert.innerHTML = p1Win;
-    b2.disabled=true;
-    b3.disabled=true;
-    b4.disabled=true;
-    b6.disabled=true;
-    b7.disabled=true;
-    b8.disabled=true;
-    alert(p1Win);
+        winAlert.innerHTML = p1Win;
+        b2.disabled=true;
+        b3.disabled=true;
+        b4.disabled=true;
+        b6.disabled=true;
+        b7.disabled=true;
+        b8.disabled=true;
+        alert(p1Win);
     }
 
     else if ((b3 == X) && (b5 == X) && (b7 == X)) {
@@ -155,16 +162,11 @@ function myGame() {
     }
 
     else {
-        if (flag = 1) {
-            winAlert.innerHTML = "Go for Player 1!";
-        }
+        document.getElementById('textline').innerHTML = "Next player click a box!"
 
-        else {
-            winAlert.innerHTML = "Go Player 2!";
-        }
     }
-
 };
 
-*/
+
+
 alert("You're good to go!");
