@@ -51,6 +51,10 @@ button {
   color: #f3d7f3;
 }
 
+button .innerHTML {
+  color:#804b6a;
+}
+
 .endGame {
   display: flex;
   flex-direction: column;
