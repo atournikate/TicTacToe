@@ -8,20 +8,16 @@ var winAlert = document.getElementById("textline");
 var p1Win = "Player 1 Wins!"
 var p2Win = "Player 2 Wins!"
 var aTie = "It's a Cat's Game!"
-
-var playerTurn = 0;
 var SYMBOLS = ["X" , "O"];
+
+
+function symbolMark () {
+    document.getElementById("#mark").innerHTML = "X";
+}
+
+
+/*
 // Setting DOM to all buttons
-
-for (i = 0; i <= 1; i++) {
-    if (i > 1) {
-        i = 0+}
-    }
-    button.innerHTML = SYMBOLS[i];
-    }
-    } 
-};
-
 function myGame() {
     var b1, b2, b3, b4, b5, b6, b7, b8, b9, b00;
     b1 = document.getElementById("b1").value;
@@ -170,5 +166,5 @@ function myGame() {
 
 };
 
-
+*/
 alert("You're good to go!");
