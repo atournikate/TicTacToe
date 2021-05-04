@@ -7,7 +7,6 @@ body {
 .background {
   background-image: url(images/Sakura1.jpg);
   margin: 0px;
-  padding: 10px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -15,7 +14,6 @@ body {
 
 .header {
   margin: 0px;
-  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -32,10 +30,13 @@ body {
 .gameboard {
   background-color: #b192b8; /*color of gameboard*/
   width: 600px; /*fixed width*/
+  height: 745px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
 }
 
 .box {
@@ -48,16 +49,28 @@ body {
 
 button {
   height: 175px;
-  color: #f3d7f3;
-}
-
-button .innerHTML {
-  color:#804b6a;
+  color: #804b6a;
+  font-size: 2.5rem;
 }
 
 .endGame {
   display: flex;
   flex-direction: column;
-  width: 300px;
   order: 3;
+  height: 50px;
+}
+
+.messageboard {
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+#textline {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: #804b6a;
+  font-size: xx-large;
 }
