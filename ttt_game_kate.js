@@ -1,20 +1,83 @@
-alert("I am reading this file..."); //Test JS
-
 //create an Array with names of the boxes/buttons (i.e. b1, b2, b3, etc.)
 var boxID = [];
 var buttonNames = document.querySelectorAll('.box .btn');
-var buttonAll = document.querySelectorAll('.btn');
 
 for (var i = 0; i < buttonNames.length; i++) {
     boxID.push(buttonNames[i].getAttribute('id'));
 }
 
-alert("We have " + boxID.length + "buttons. Box 1 is named " + boxID[0] + " Box 2 is named " + boxID[1]); //check that Array is working = yes
+var winCrit = [
+    ["b1", "b2", "b3"],
+    ["b4", "b5", "b6"],
+    ["b7", "b8", "b9"],
+    ["b1", "b4", "b7"],
+    ["b2", "b5", "b8"],
+    ["b3", "b6", "b9"],
+    ["b1", "b5", "b9"],
+    ["b3", "b5", "b7"]
+ ]
+
+var tickBox = 0; //not connected yet...
+
+/*alert("We have " + boxID.length + " buttons. Box 1 is named " + boxID[0] + " Box 2 is named " + boxID[1]); //check that Array is working = yes
+*/
+
+//Alternate players and symbols - DO NOT CHANGE
+var player = "X";
+
+function turnChange(id) {
+    if (document.getElementById(id).innerHTML == "") {
+    
+        if (player == "X") {
+            document.getElementById(id).innerHTML = "X";
+            document.getElementById("textline").innerHTML = "Player 2's turn!";
+            player = "O";
+            tickBox++;
+            winCriteria(player);
+        }
+        else {
+            document.getElementById(id).innerHTML = "O";
+            document.getElementById("textline").innerHTML = "Player 1's turn!";
+            player = "X";
+            tickBox++;
+            winCriteria(player);
+        }
+    }
+};
+
+function resetMe() {
+    location.reload();
+}
+
+var p1Win = "Player 1 wins!"
+var p2Win = "Player 2 wins!"
+var aTie = "Cat's Game!"
+
+//trying to complete the winning criteria - not quite finished here...
+function winCriteria() {
+    for (var x = 0; x < winCrit.length; x++) {
+        console.log(winCrit[x]);
+        var winCombo = winCrit[x];
+        var win1 = document.getElementById(winCombo[0]).innerHTML;
+        var win2 = document.getElementById(winCombo[1]).innerHTML;
+        var win1 = document.getElementById(winCombo[2]).innerHTML;
+        if ((win1 == win2) && (win2 == win3) && (win1 != "") && (win2 != "") && (win3 != "")) {
+            document.getElementsByClassName("textline").innerHTML = p1Win
+        }
+    }
+}
+
+
+//End alternate players
+
+/*
+
 
 //winning criteria and alerts - need to connect this to a winning condition in the html... ????
 var p1Win = "Player 1 wins!"
 var p2Win = "Player 2 wins!"
 var aTie = "Cat's Game!"
+
 
 function winCriteria() {
     
@@ -23,7 +86,7 @@ function winCriteria() {
     (boxID[6, 7, 8].innerHTML == "X") || (boxID[0, 4, 8].innerHTML == "X") || 
     (boxID[2, 4, 6].innerHTML == "X") || (boxID[0, 3, 6].innerHTML == "X") || 
     (boxID[1, 4, 7].innerHTML == "X") || (boxID[2, 5, 8].innerHTML == "X")) {
-        document.getElementsByClassName("textline").innerHTML = "Player 1 Wins!!!"
+        
         alert(p1Win);
         console.log("Player1 wins");
     }
@@ -44,32 +107,4 @@ function winCriteria() {
 };
 
 
-//Alternate players and symbols - DO NOT CHANGE
-var player = "X";
-
-function turnChange(id) {
-    
-    if (player == "X") {
-        document.getElementsByClassName("textline").innerHTML = "Player 2's turn!";
-        document.getElementById(id).innerHTML = "X";
-        document.getElementById(id).disabled = true;
-        player = "O";
-    }
-    else {
-        document.getElementById(id).innerHTML = "O";
-        document.getElementsByClassName("textline").innerHTML = "Player 1's turn!";
-        document.getElementById(id).disabled = true;
-        player = "X";
-    }
-
-    winCriteria();
-
-};
-//End alternate players
-
-
-
-
-
-
-alert("You're good to go!"); //JS read through the whole document.
+*/
