@@ -43,6 +43,10 @@ function turnChange(id) {
             winCriteria(player);
         }
     }
+
+    if (tickBox > document.querySelectorAll('.box .btn')) {
+        winCriteria();
+    }
 };
 
 function resetMe() {
@@ -60,10 +64,16 @@ function winCriteria() {
         var winCombo = winCrit[x];
         var win1 = document.getElementById(winCombo[0]).innerHTML;
         var win2 = document.getElementById(winCombo[1]).innerHTML;
-        var win1 = document.getElementById(winCombo[2]).innerHTML;
-        if ((win1 == win2) && (win2 == win3) && (win1 != "") && (win2 != "") && (win3 != "")) {
+        var win3 = document.getElementById(winCombo[2]).innerHTML;
+        var win4 = document.getElementById(winCombo[3]).innerHTML;
+        var win5 = document.getElementById(winCombo[4]).innerHTML;
+        var win6 = document.getElementById(winCombo[5]).innerHTML;
+        var win7 = document.getElementById(winCombo[6]).innerHTML;
+        var win8 = document.getElementById(winCombo[7]).innerHTML;
+
+        /*if ((win1 == win2) && (win2 == win3) && (win1 != "") && (win2 != "") && (win3 != "")) {
             document.getElementsByClassName("textline").innerHTML = p1Win
-        }
+        }*/
     }
 }
 
